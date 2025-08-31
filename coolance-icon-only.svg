@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#009FB9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#007a8a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F39800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d08500;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C70C0C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a00a0a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main teal flame -->
+  <path d="M50 180 Q20 150 10 100 Q10 50 30 30 Q50 10 80 20 Q100 25 110 50 L100 180 Z" fill="url(#tealGrad)"/>
+  
+  <!-- Orange flame -->
+  <path d="M100 180 L180 80 Q190 60 180 40 Q170 30 160 35 Q140 30 130 50 Q125 60 130 70 L100 180 Z" fill="url(#orangeGrad)"/>
+  
+  <!-- Red flame layers -->
+  <path d="M70 180 Q50 140 60 100 Q70 80 80 70 Q90 60 110 70 Q130 80 125 110 Q120 140 110 160 L70 180 Z" fill="url(#redGrad)"/>
+  
+  <!-- Inner red flame -->
+  <path d="M85 160 Q75 130 85 110 Q95 90 105 95 Q115 100 115 120 Q115 140 105 150 Q100 160 95 160 L85 160 Z" fill="#E53E3E"/>
+  
+  <!-- Small white flame -->
+  <path d="M95 140 Q90 125 95 115 Q100 110 105 115 Q105 125 102 135 L95 140 Z" fill="white"/>
+</svg>

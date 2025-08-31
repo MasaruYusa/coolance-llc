@@ -1,159 +1,344 @@
-
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>合同会社Coolance | AIの力で未来を創造する</title>
-    <meta name="description" content="AIのチカラで未来を創造する。合同会社Coolanceは、テクノロジーで新たな価値を創造します。">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- 外部CSS -->
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coolance株式会社 - AIのチカラで未来を創造する</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- ヘッダー -->
     <header class="header">
-        <div class="header-content">
-            <div class="logo">Coolance</div>
-            <nav>
-                <ul>
-                    <li><a href="#about">会社紹介</a></li>
-                    <li><a href="#services">事業構成</a></li>
-                    <li><a href="#company">会社概要</a></li>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="【ヘッダー】新ロゴ.png" alt="Coolance株式会社" class="logo-image">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#about">会社概要</a></li>
+                    <li><a href="#mission">ミッション</a></li>
+                    <li><a href="#services">サービス</a></li>
+                    <li><a href="#profile">会社情報</a></li>
                     <li><a href="#contact">お問い合わせ</a></li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- ヒーロー -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1><span>AI</span> のチカラで<br>未来を創造する</h1>
-            <p>テクノロジーと戦略の融合で、個人/企業の可能性を最大化</p>
-            <a href="#contact" class="btn">無料相談を開始する</a>
-        </div>
-    </section>
-
-    <!-- 会社紹介 -->
-    <section id="about" class="section">
-        <h2 class="section-title">会社紹介</h2>
-        <div class="about-grid">
-            <div class="about-card fade-in">
-                <h3>MISSION</h3>
-                <p>個人・企業の可能性を最大化</p>
-            </div>
-            <div class="about-card fade-in">
-                <h3>VISION</h3>
-                <p>人が幸せで自由に生きる世界をつくる</p>
-            </div>
-            <div class="about-card fade-in">
-                <h3>VALUE</h3>
-                <p>情熱<br>貢献<br>成長</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 事業構成 -->
-    <section id="services" class="services">
-        <h2 class="section-title">事業構成</h2>
-        <div class="services-grid">
-            <div class="service-card fade-in">
-                <div class="service-icon">🤖</div>
-                <h3>生成AIコンサルティング</h3>
-                <p>最新の生成AI技術を活用し、業務プロセスの革新的な効率化を実現。すぐに業務で活用できる生成AI活用方法の提供から社内AI人材の育成まで、包括的に支援します。</p>
-                <ul class="service-features">
-                    <li>具体的かつ実用的な生成AI活用術</li>
-                    <li>社内AI人材育成プログラム</li>
-                    <li>業務効率の大幅UP</li>
-                </ul>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">🏢</div>
-                <h3>M&Aアドバイザリー</h3>
-                <p>戦略立案からクロージングまで、M&Aプロセス全体をワンストップで支援します。特に、ベンチャー・スタートアップM&Aに豊富な実績があります。</p>
-                <ul class="service-features">
-                    <li>M&Aプロセスをフルサポート</li>
-                    <li>ベンチャー・スタートアップM&A</li>
-                    <li>生成AIフル活用による成約率の向上</li>
-                </ul>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">📈</div>
-                <h3>投資事業</h3>
-                <p>テクノロジー、スポーツ、ウェルネス分野等、幅広い領域でシード投資の検討が可能。将来的に、自社でM&Aも行い事業領域の拡大を図ります。
-                </p>
-                <ul class="service-features">
-                    <li>シード投資</li>
-                    <li>M&Aによる事業領域の拡大</li>
-                    <li>不動産投資</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- 会社概要 -->
-    <section id="company" class="company-info">
-        <h2 class="section-title">会社概要</h2>
-        <div class="info-container">
-            <div class="info-content fade-in">
-                <h3>合同会社Coolance</h3>
-                <table class="info-table">
-                    <tr>
-                        <td>会社名</td>
-                        <td>合同会社Coolance</td>
-                    </tr>
-                    <tr>
-                        <td>代表社員</td>
-                        <td>遊佐 優</td>
-                    </tr>
-                    <tr>
-                        <td>設立</td>
-                        <td>2025年7月</td>
-                    </tr>
-                    <tr>
-                        <td>資本金</td>
-                        <td>100万円</td>
-                    </tr>
-                    <tr>
-                        <td>本社所在地</td>
-                        <td>〒183-0056<br>東京都府中市寿町1-2-2</td>
-                    </tr>
-                    <tr>
-                        <td>事業内容</td>
-                        <td>生成AIコンサルティング<br>M&Aアドバイザリー<br>投資事業</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="info-visual fade-in">
-                <div style="text-align: center; z-index: 2;">
-                    <h3 style="font-size: 3rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Coolance</h3>
-                    <p style="color: var(--text-light); margin-top: 1rem;">Innovation Through Integration</p>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="highlight">AI</span>のチカラで<br>
+                        <span class="gradient-text">未来を創造する</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        テクノロジーと戦略を融合させ、<br>
+                        企業の成長と革新を支援します
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">無料相談を始める</a>
+                        <a href="#services" class="btn btn-secondary">サービス詳細</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <i class="fas fa-brain"></i>
+                        <span>AI Consulting</span>
+                    </div>
+                    <div class="floating-card">
+                        <i class="fas fa-chart-line"></i>
+                        <span>M&A Advisory</span>
+                    </div>
+                    <div class="floating-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Investment</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>私たちについて</h2>
+                    <p>AIと戦略的思考で、企業の未来を切り開く</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Coolanceは、AIテクノロジーの力と戦略的な企業経営のノウハウを組み合わせ、企業の成長と革新を支援する専門コンサルティング会社です。</p>
+                        <p>我々は単なるテクノロジーの提供者ではなく、お客様のビジネスパートナーとして、持続可能な成長と競争優位性の確立をサポートします。</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">プロジェクト実績</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">満足いただいた企業</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5年</div>
+                            <div class="stat-label">業界経験</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section id="mission" class="section mission">
+            <div class="container">
+                <div class="mission-content">
+                    <div class="mission-item">
+                        <div class="mission-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>ミッション</h3>
+                        <p>AIとテクノロジーの力で、企業の可能性を最大化し、持続可能な成長を実現する</p>
+                    </div>
+                    <div class="mission-item">
+                        <div class="mission-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>ビジョン</h3>
+                        <p>すべての企業がAIを活用して競争優位性を確立できる社会の実現</p>
+                    </div>
+                    <div class="mission-item">
+                        <div class="mission-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>バリュー</h3>
+                        <p>革新性、誠実さ、そしてお客様との長期的なパートナーシップを重視</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>サービス</h2>
+                    <p>3つの専門分野で包括的にサポート</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>生成AI コンサルティング</h3>
+                        <p>最新の生成AI技術を活用し、業務効率化と新しいビジネスモデルの構築を支援します。</p>
+                        <ul class="service-features">
+                            <li>AI戦略策定</li>
+                            <li>システム導入支援</li>
+                            <li>従業員トレーニング</li>
+                            <li>ROI測定・改善</li>
+                        </ul>
+                        <a href="#contact" class="service-link">詳細を見る</a>
+                    </div>
+                    <div class="service-card featured">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>M&A アドバイザリー</h3>
+                        <p>豊富な経験と深い業界知識を基に、戦略的なM&A取引をサポートします。</p>
+                        <ul class="service-features">
+                            <li>企業価値評価</li>
+                            <li>買収候補先の選定</li>
+                            <li>交渉代行</li>
+                            <li>統合後支援</li>
+                        </ul>
+                        <a href="#contact" class="service-link">詳細を見る</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>投資事業</h3>
+                        <p>革新的なテクノロジーを持つスタートアップへの投資を通じて、未来を創造します。</p>
+                        <ul class="service-features">
+                            <li>スタートアップ投資</li>
+                            <li>事業開発支援</li>
+                            <li>戦略的パートナーシップ</li>
+                            <li>エグジット支援</li>
+                        </ul>
+                        <a href="#contact" class="service-link">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="section profile">
+            <div class="container">
+                <div class="section-header">
+                    <h2>会社情報</h2>
+                </div>
+                <div class="profile-content">
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <div class="info-label">会社名</div>
+                            <div class="info-value">Coolance株式会社</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">設立</div>
+                            <div class="info-value">2025年7月</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">資本金</div>
+                            <div class="info-value">100万円</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">所在地</div>
+                            <div class="info-value">東京都府中市</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">代表取締役</div>
+                            <div class="info-value">遊佐 雄</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">事業内容</div>
+                            <div class="info-value">
+                                生成AIコンサルティング<br>
+                                M&Aアドバイザリー<br>
+                                投資事業
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-visual">
+                        <div class="company-vision">
+                            <h3>企業理念</h3>
+                            <p>"Technology meets Strategy"</p>
+                            <p>テクノロジーと戦略の融合により、<br>お客様の成功を実現します</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>お問い合わせ</h2>
+                    <p>お気軽にご相談ください</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>メール</h4>
+                                <p>info@coolance.co.jp</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>電話</h4>
+                                <p>03-XXXX-XXXX</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>営業時間</h4>
+                                <p>平日 9:00-18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>無料相談フォーム</h3>
+                        <form class="consultation-form">
+                            <div class="form-group">
+                                <label for="company">会社名</label>
+                                <input type="text" id="company" name="company" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">お名前</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">メールアドレス</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">ご興味のあるサービス</label>
+                                <select id="service" name="service">
+                                    <option value="">選択してください</option>
+                                    <option value="ai-consulting">生成AIコンサルティング</option>
+                                    <option value="ma-advisory">M&Aアドバイザリー</option>
+                                    <option value="investment">投資事業</option>
+                                    <option value="other">その他</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">ご相談内容</label>
+                                <textarea id="message" name="message" rows="5" placeholder="ご相談内容をお聞かせください"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">相談を申し込む</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="【最下段】新ロゴ_モノクロ.png" alt="Coolance株式会社" class="footer-logo-image">
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>サービス</h4>
+                        <ul>
+                            <li><a href="#services">生成AIコンサルティング</a></li>
+                            <li><a href="#services">M&Aアドバイザリー</a></li>
+                            <li><a href="#services">投資事業</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>会社情報</h4>
+                        <ul>
+                            <li><a href="#about">会社概要</a></li>
+                            <li><a href="#mission">ミッション</a></li>
+                            <li><a href="#profile">会社情報</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>お問い合わせ</h4>
+                        <ul>
+                            <li><a href="#contact">無料相談</a></li>
+                            <li><a href="mailto:info@coolance.co.jp">info@coolance.co.jp</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Coolance株式会社. All rights reserved.</p>
+            </div>
         </div>
-    </section>
-
-    <!-- コンタクト -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">お問い合わせ</h2>
-        <p style="color: var(--text-light); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
-            AI導入やM&A戦略について、お気軽にご相談ください。<br>
-            経験豊富なコンサルタントが貴社の課題解決をサポートします。
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTtVMGWAowAx5XMwbQtzRixE5lMjTNzDOmdLDPA17zBqLaSg/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="contact-btn">無料相談を申し込む</a>
-    </section>
-
-    <!-- フッター -->
-    <footer>
-        <p>&copy; 2025 合同会社Coolance. All rights reserved.</p>
     </footer>
 
-    <!-- 外部JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
