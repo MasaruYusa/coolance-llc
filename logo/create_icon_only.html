@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Coolance Icon-Only Logo</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        canvas {
+            border: 1px solid #ddd;
+            display: block;
+            margin: 20px 0;
+        }
+        button {
+            background: #C70C0C;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover {
+            background: #a00a0a;
+        }
+        .preview {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Coolanceアイコンロゴ作成ツール</h1>
+        <p>フッター用のアイコンのみのロゴとヘッダー用の組み合わせロゴを作成します。</p>
+        
+        <h3>アイコンのみ（フッター用）</h3>
+        <canvas id="iconCanvas" width="200" height="200"></canvas>
+        <button onclick="createIconOnly()">アイコンを生成</button>
+        <button onclick="downloadIcon()">PNGダウンロード</button>
+        
+        <h3>アイコン+テキスト（ヘッダー用）</h3>
+        <canvas id="headerCanvas" width="300" height="60"></canvas>
+        <button onclick="createHeaderLogo()">ヘッダーロゴを生成</button>
+        <button onclick="downloadHeader()">PNGダウンロード</button>
+        
+        <div class="preview">
+            <h3>プレビュー:</h3>
+            <div id="preview"></div>
+        </div>
+    </div>
+
+    <script>
+        function drawFlameIcon(ctx, x, y, size) {
+            const scale = size / 200;
+            
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.scale(scale, scale);
+            
+            // Main flame shape (teal)
+            ctx.beginPath();
+            ctx.fillStyle = '#009FB9';
+            ctx.moveTo(50, 180);
+            ctx.bezierCurveTo(20, 150, 10, 100, 30, 50);
+            ctx.bezierCurveTo(40, 20, 80, 10, 100, 40);
+            ctx.lineTo(110, 50);
+            ctx.lineTo(100, 180);
+            ctx.fill();
+            
+            // Orange flame
+            ctx.beginPath();
+            ctx.fillStyle = '#F39800';
+            ctx.moveTo(100, 180);
+            ctx.lineTo(180, 80);
+            ctx.bezierCurveTo(190, 60, 180, 40, 160, 50);
+            ctx.bezierCurveTo(140, 30, 120, 40, 130, 60);
+            ctx.lineTo(100, 180);
+            ctx.fill();
+            
+            // Red flame layers
+            ctx.beginPath();
+            ctx.fillStyle = '#C70C0C';
+            ctx.moveTo(70, 180);
+            ctx.bezierCurveTo(50, 140, 60, 100, 80, 80);
+            ctx.bezierCurveTo(90, 60, 110, 70, 120, 90);
+            ctx.bezierCurveTo(130, 110, 125, 140, 110, 160);
+            ctx.lineTo(70, 180);
+            ctx.fill();
+            
+            // Inner flame (lighter red)
+            ctx.beginPath();
+            ctx.fillStyle = '#E53E3E';
+            ctx.moveTo(85, 160);
+            ctx.bezierCurveTo(75, 130, 85, 110, 95, 100);
+            ctx.bezierCurveTo(105, 90, 115, 100, 115, 120);
+            ctx.bezierCurveTo(115, 140, 105, 150, 95, 160);
+            ctx.lineTo(85, 160);
+            ctx.fill();
+            
+            // Small inner flame (white)
+            ctx.beginPath();
+            ctx.fillStyle = 'white';
+            ctx.moveTo(95, 140);
+            ctx.bezierCurveTo(90, 125, 95, 115, 100, 110);
+            ctx.bezierCurveTo(105, 115, 105, 125, 102, 135);
+            ctx.lineTo(95, 140);
+            ctx.fill();
+            
+            ctx.restore();
+        }
+        
+        function createIconOnly() {
+            const canvas = document.getElementById('iconCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw flame icon centered
+            drawFlameIcon(ctx, 0, 10, 180);
+            
+            console.log('Icon-only logo created');
+        }
+        
+        function createHeaderLogo() {
+            const canvas = document.getElementById('headerCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw small flame icon
+            drawFlameIcon(ctx, 5, 5, 50);
+            
+            // Draw text
+            ctx.fillStyle = 'rgb(65, 65, 65)';
+            ctx.font = 'bold 32px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('Coolance', 70, 30);
+            
+            console.log('Header logo created');
+        }
+        
+        function downloadIcon() {
+            const canvas = document.getElementById('iconCanvas');
+            const link = document.createElement('a');
+            link.download = 'coolance-icon-only.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        function downloadHeader() {
+            const canvas = document.getElementById('headerCanvas');
+            const link = document.createElement('a');
+            link.download = 'coolance-header-logo.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        function updatePreview() {
+            const iconCanvas = document.getElementById('iconCanvas');
+            const headerCanvas = document.getElementById('headerCanvas');
+            const preview = document.getElementById('preview');
+            
+            preview.innerHTML = `
+                <div style="margin-bottom: 20px;">
+                    <h4>アイコンのみ（フッター用）:</h4>
+                    <img src="${iconCanvas.toDataURL()}" alt="Icon Only" style="background: #414141; padding: 20px; border-radius: 4px; max-width: 100px;">
+                </div>
+                <div>
+                    <h4>アイコン+テキスト（ヘッダー用）:</h4>
+                    <img src="${headerCanvas.toDataURL()}" alt="Header Logo" style="background: #f0f0f0; padding: 10px; border-radius: 4px;">
+                </div>
+            `;
+        }
+        
+        // Auto-create logos on page load
+        window.onload = function() {
+            createIconOnly();
+            createHeaderLogo();
+            setTimeout(updatePreview, 100);
+        };
+    </script>
+</body>
+</html>
