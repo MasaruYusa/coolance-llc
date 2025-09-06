@@ -242,24 +242,23 @@ body {
 
 .floating-card {
     background: rgba(255, 255, 255, 0.95);
-    padding: 1.5rem;
+    padding: 1.5rem 3rem;
     border-radius: 12px;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     box-shadow: var(--shadow-lg);
     animation: floatCard 3s ease-in-out infinite;
     color: var(--text-primary);
+    width: 440px;
 }
 
 .floating-card:nth-child(2) {
     animation-delay: -1s;
-    margin-left: 2rem;
 }
 
 .floating-card:nth-child(3) {
     animation-delay: -2s;
-    margin-left: 1rem;
 }
 
 @keyframes floatCard {
